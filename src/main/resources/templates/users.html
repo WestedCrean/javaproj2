@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:include="layout :: head">
+</head>
+<body>
+<div th:include="layout :: navigationPanel"></div>
+
+<table>
+    <tr>
+        <th>ID</th> <th>IMIE</th> <th>NAZWISKO</th> <th>NICKNAME</th>
+    </tr>
+    <tr th:each="element : ${users}">
+        <td th:text="${element.getUserid()}"></td>
+        <td th:text="${element.getName()}"></td>
+        <td th:text="${element.getSurname()}"></td>
+        <td th:text="${element.getLogin()}"></td>
+    </tr>
+</table>
+</body>
+</html>
